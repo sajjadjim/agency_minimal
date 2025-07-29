@@ -20,7 +20,7 @@ const tutorials = [
 
 const QualityFeature = () => {
   return (
-    <section className="pt-16 pb-50 bg-gray-50 ">
+    <section id="aboutUs" className="pt-16 pb-20 bg-gray-50 ">
       <div className="max-w-7xl  text-center mx-auto 2xl:max-w-8/12 md:w-9/12 px-4">
         <h3 className="text-sm text-purple-600 font-medium mb-2">Quality Features</h3>
         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">

@@ -5,6 +5,7 @@ import Software from "./Software/Software";
 import CustomerComment from "./Customer Comment/CustomerComments";
 import CustomerSupport from "./Customer Support/CustomerSupport";
 import QualityFeature from "./Quality Feature/QualityFeature";
+import ContactPage from "../Contact/Contact";
 
 export default function HomeHero({
   description = `We help build and manage a team of world-class developers to bring your vision to life`,
@@ -51,8 +52,8 @@ export default function HomeHero({
 
   return (
   <section>
-      <section className="w-full bg-[#F6F8FB]">
-      <div className="mx-auto 2xl:max-w-10/12 md:w-11/12 px-4 ">
+      <section className="w-full ">
+      <div id="hero_part" className="mx-auto 2xl:max-w-10/12 md:w-11/12 px-4 ">
         <div className="grid items-center gap-10 py-12 md:grid-cols-2 md:py-20">
           {/* Text side */}
           <div className="order-2 md:order-1">
@@ -137,6 +138,7 @@ export default function HomeHero({
     <CustomerComment></CustomerComment>
     <CustomerSupport></CustomerSupport>
     <QualityFeature></QualityFeature>
+    <ContactPage></ContactPage>
   </section>
   );
 }

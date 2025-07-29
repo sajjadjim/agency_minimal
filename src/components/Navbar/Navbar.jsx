@@ -27,42 +27,90 @@ const Navbar = () => {
               onClick={closeMenu}
               className="inline-flex items-center gap-2"
             >
-              <span className="text-xl"><img src="../../../public/icons8-logo-50.png" alt="" className="h-8 w-8" /></span>
+              <span className="text-xl">
+                <img src="/icons8-logo-50.png" alt="" className="h-8 w-8" />
+              </span>
               <span className="text-lg font-bold text-gray-900">
                 Builderz
               </span>
             </NavLink>
           </div>
 
-          <ul className="hidden md:flex justify-center items-center gap-4">
+          <ul className="hidden md:flex justify-center items-center gap-6">
             <li>
-              <NavLink to="/" className={navLinkClass}>
+              <a href="#hero_part" className={navLinkClass}
+              onClick={e => {
+                  e.preventDefault();
+                  const el = document.getElementById("hero_part");
+                  if (el) {
+                    el.scrollIntoView({ behavior: "smooth" });
+                  }
+                  closeMenu();
+                }}
+              >
                 Home
-              </NavLink>
+              </a>
             </li>
             <li>
-              <NavLink to="/" className={navLinkClass}>
+              <a href="#advertisement" className={navLinkClass}
+              onClick={e => {
+                  e.preventDefault();
+                  const el = document.getElementById("support");
+                  if (el) {
+                    el.scrollIntoView({ behavior: "smooth" });
+                  }
+                  closeMenu();
+                }}
+              >
                 Adversite
-              </NavLink>
+              </a>
             </li>
             <li>
-              <NavLink to="/" className={navLinkClass}>
+              <a
+                href="#support"
+                className={navLinkClass}
+                onClick={e => {
+                  e.preventDefault();
+                  const el = document.getElementById("support");
+                  if (el) {
+                    el.scrollIntoView({ behavior: "smooth" });
+                  }
+                  closeMenu();
+                }}
+              >
                 Supports
-              </NavLink>
+              </a>
             </li>
             <li>
-              <NavLink to="/" className={navLinkClass}>
+              <a href="#contact" className={navLinkClass}
+                onClick={e => {
+                  e.preventDefault();
+                  const el = document.getElementById("aboutUs");
+                  if (el) {
+                    el.scrollIntoView({ behavior: "smooth" });
+                  }
+                  closeMenu();
+                }}>
                 Contact
-              </NavLink>
+              </a>
             </li>
             <li>
-              <NavLink to="/" className={navLinkClass}>
+              <a
+                href="#aboutUs"
+                className={navLinkClass}
+                onClick={e => {
+                  e.preventDefault();
+                  const el = document.getElementById("aboutUs");
+                  if (el) {
+                    el.scrollIntoView({ behavior: "smooth" });
+                  }
+                  closeMenu();
+                }}
+              >
                 AboutUs
-              </NavLink>
+              </a>
             </li>
           </ul>
-
-          {/* Right: Register (hidden on small screens) */}
           <div className="hidden md:flex justify-end">
             <NavLink
               to="/register"
