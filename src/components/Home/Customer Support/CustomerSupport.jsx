@@ -2,7 +2,7 @@ import React from "react";
 
 const CustomerSupport = () => {
   return (
-    <div className="py-16  md:px-12 lg:px-24 bg-white flex flex-col-reverse md:flex-row items-center justify-between gap-12 mx-auto 2xl:max-w-8/12 md:w-9/12 px-4">
+    <div id="support" className="py-16  md:px-12 lg:px-24 bg-white flex flex-col-reverse md:flex-row items-center justify-between gap-12 mx-auto 2xl:max-w-8/12 md:w-9/12 px-4">
       
       {/* Left Content */}
       <div className="text-center md:text-left max-w-xl">
@@ -28,7 +28,7 @@ const CustomerSupport = () => {
 
       <div className="w-full max-w-md">
         <img
-          src="../../../../public/customer_support.png"
+          src="/customer_support.png"
           alt="Customer Support"
           className="w-full h-auto object-contain"
         />

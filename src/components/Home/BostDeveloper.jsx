@@ -1,4 +1,4 @@
-// BostDeveloper.jsx
+
 import React from "react";
 import { FiCheckCircle, FiArrowRight } from "react-icons/fi";
 export default function BostDeveloper({
@@ -9,7 +9,7 @@ export default function BostDeveloper({
     "Completely responsive features",
     "Easy to customize plugins",
   ],
-  imageSrc = "../../../public/shutterstock_1361520500 1@2x.png", // replace with your actual image path
+  imageSrc = "/shutterstock_1361520500 1@2x.png", // replace with your actual image path
   ctaText = "Learn more",
   onCta,
 }) {

@@ -4,24 +4,24 @@ const tutorials = [
   {
     title: "How to work with prototype design with adobe xd featuring tools",
     comments: 22,
-    image: "../../../../public/card images/image1.jpg",
+    image: "/card images/image1.jpg",
   },
   {
     title: "Create multiple artboard by using figma prototyping development",
     comments: 15,
-    image: "../../../../public/card images/image2.jpg",
+    image: "/card images/image2.jpg",
   },
   {
     title: "Convert your web layout theming easily with sketch zeplin extension",
     comments: 18,
-    image: "../../../../public/card images/image3.jpg",
+    image: "/card images/image3.jpg",
   },
 ];
 
 const QualityFeature = () => {
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 text-center">
+    <section className="pt-16 pb-50 bg-gray-50 ">
+      <div className="max-w-7xl  text-center mx-auto 2xl:max-w-8/12 md:w-9/12 px-4">
         <h3 className="text-sm text-purple-600 font-medium mb-2">Quality Features</h3>
         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">
           Tutorials that people love most

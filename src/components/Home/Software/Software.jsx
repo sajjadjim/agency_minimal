@@ -4,7 +4,7 @@ const Software = () => {
     const [isPlaying, setIsPlaying] = useState(false);
 
     return (
-        <div className="py-16 px-4 md:px-12 lg:px-24 text-center bg-white">
+        <div id='advertisement' className="py-16 px-4 md:px-12 lg:px-24 text-center bg-white">
             {/* Heading Section */}
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Leading companies trust us <br /> to develop software
