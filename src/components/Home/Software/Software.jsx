@@ -5,7 +5,7 @@ const Software = () => {
 
     return (
         <div id='advertisement' className="py-16 px-4 md:px-12 lg:px-24 text-center bg-white">
-            {/* Heading Section */}
+        
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Leading companies trust us <br /> to develop software
             </h2>
@@ -16,7 +16,7 @@ const Software = () => {
                 Explore Details
             </a>
 
-            {/* Video Section */}
+
             <div className="relative max-w-5xl mx-auto aspect-video rounded-xl overflow-hidden shadow-lg">
                 {!isPlaying ? (
                     <div className="w-full h-full bg-cover bg-center" style={{

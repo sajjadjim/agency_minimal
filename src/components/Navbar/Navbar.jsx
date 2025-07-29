@@ -9,11 +9,6 @@ const Navbar = () => {
     "px-3 py-2 rounded-md text-sm font-medium transition-colors";
   const linkIdle =
     "text-gray-600 hover:text-gray-900 hover:bg-gray-50";
-  const linkActive = "text-gray-900 bg-gray-100";
-
-  const navLinkClass = ({ isActive }) =>
-    `${linkBase} ${isActive ? linkActive : linkIdle}`;
-
   const closeMenu = () => setOpen(false);
 
   return (
@@ -38,9 +33,10 @@ const Navbar = () => {
 
           <ul className="hidden md:flex justify-center items-center gap-6">
             <li>
-              <a href="#hero_part" className={navLinkClass}
-              onClick={e => {
-                  e.preventDefault();
+              <button
+                type="button"
+                className={linkBase + " " + linkIdle}
+                onClick={() => {
                   const el = document.getElementById("hero_part");
                   if (el) {
                     el.scrollIntoView({ behavior: "smooth" });
@@ -49,13 +45,14 @@ const Navbar = () => {
                 }}
               >
                 Home
-              </a>
+              </button>
             </li>
             <li>
-              <a href="#advertisement" className={navLinkClass}
-              onClick={e => {
-                  e.preventDefault();
-                  const el = document.getElementById("support");
+              <button
+                type="button"
+                className={linkBase + " " + linkIdle}
+                onClick={() => {
+                  const el = document.getElementById("advertisement");
                   if (el) {
                     el.scrollIntoView({ behavior: "smooth" });
                   }
@@ -63,14 +60,13 @@ const Navbar = () => {
                 }}
               >
                 Adversite
-              </a>
+              </button>
             </li>
             <li>
-              <a
-                href="#support"
-                className={navLinkClass}
-                onClick={e => {
-                  e.preventDefault();
+              <button
+                type="button"
+                className={linkBase + " " + linkIdle}
+                onClick={() => {
                   const el = document.getElementById("support");
                   if (el) {
                     el.scrollIntoView({ behavior: "smooth" });
@@ -79,27 +75,28 @@ const Navbar = () => {
                 }}
               >
                 Supports
-              </a>
+              </button>
             </li>
             <li>
-              <a href="#contact" className={navLinkClass}
-                onClick={e => {
-                  e.preventDefault();
-                  const el = document.getElementById("aboutUs");
+              <button
+                type="button"
+                className={linkBase + " " + linkIdle}
+                onClick={() => {
+                  const el = document.getElementById("contact");
                   if (el) {
                     el.scrollIntoView({ behavior: "smooth" });
                   }
                   closeMenu();
-                }}>
+                }}
+              >
                 Contact
-              </a>
+              </button>
             </li>
             <li>
-              <a
-                href="#aboutUs"
-                className={navLinkClass}
-                onClick={e => {
-                  e.preventDefault();
+              <button
+                type="button"
+                className={linkBase + " " + linkIdle}
+                onClick={() => {
                   const el = document.getElementById("aboutUs");
                   if (el) {
                     el.scrollIntoView({ behavior: "smooth" });
@@ -108,7 +105,7 @@ const Navbar = () => {
                 }}
               >
                 AboutUs
-              </a>
+              </button>
             </li>
           </ul>
           <div className="hidden md:flex justify-end">
@@ -120,8 +117,7 @@ const Navbar = () => {
             </NavLink>
           </div>
 
-          {/* Hamburger button (mobile) */}
-          <div className="flex justify-end md:hidden">
+          <div className="flex  ml-45 justify-end md:hidden">
             <button
               type="button"
               aria-label="Toggle menu"
@@ -151,37 +147,68 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile menu */}
         {open && (
           <div className="md:hidden border-t border-gray-200 pt-2 pb-3">
             <ul className="flex flex-col gap-1">
               <li>
-                <NavLink to="/" onClick={closeMenu} className={navLinkClass}>
+                <button
+                  type="button"
+                  className={linkBase + " " + linkIdle}
+                  onClick={() => {
+                    const el = document.getElementById("hero_part");
+                    if (el) {
+                      el.scrollIntoView({ behavior: "smooth" });
+                    }
+                    closeMenu();
+                  }}
+                >
                   Home
-                </NavLink>
+                </button>
               </li>
               <li>
-                <NavLink to="/about" onClick={closeMenu} className={navLinkClass}>
+                <button
+                  type="button"
+                  className={linkBase + " " + linkIdle}
+                  onClick={() => {
+                    const el = document.getElementById("aboutUs");
+                    if (el) {
+                      el.scrollIntoView({ behavior: "smooth" });
+                    }
+                    closeMenu();
+                  }}
+                >
                   About
-                </NavLink>
+                </button>
               </li>
               <li>
-                <NavLink
-                  to="/services"
-                  onClick={closeMenu}
-                  className={navLinkClass}
+                <button
+                  type="button"
+                  className={linkBase + " " + linkIdle}
+                  onClick={() => {
+                    const el = document.getElementById("services");
+                    if (el) {
+                      el.scrollIntoView({ behavior: "smooth" });
+                    }
+                    closeMenu();
+                  }}
                 >
                   Services
-                </NavLink>
+                </button>
               </li>
               <li>
-                <NavLink
-                  to="/contact"
-                  onClick={closeMenu}
-                  className={navLinkClass}
+                <button
+                  type="button"
+                  className={linkBase + " " + linkIdle}
+                  onClick={() => {
+                    const el = document.getElementById("contact");
+                    if (el) {
+                      el.scrollIntoView({ behavior: "smooth" });
+                    }
+                    closeMenu();
+                  }}
                 >
                   Contact
-                </NavLink>
+                </button>
               </li>
             </ul>
 

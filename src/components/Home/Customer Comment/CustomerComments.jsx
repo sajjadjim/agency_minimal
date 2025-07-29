@@ -33,7 +33,7 @@ const CustomerComment = () => {
         Love their work and would like to work with them again
       </p>
 
-      {/* Avatar Section */}
+    
       <div className="flex flex-col md:flex-row items-center justify-center gap-8 mt-6">
         {customers.map((customer, index) => (
           <div

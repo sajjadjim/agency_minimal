@@ -1,4 +1,4 @@
-// FutureApp.jsx
+
 import React from "react";
 import { FiPenTool, FiEdit3, FiAward } from "react-icons/fi";
 import { TbVector } from "react-icons/tb";
@@ -42,7 +42,7 @@ export default function FutureApp() {
   return (
     <section className="py-16 sm:py-20 lg:py-24 mx-auto 2xl:max-w-10/12 md:w-11/12 px-4">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Heading */}
+
         <div className="text-center max-w-2xl mx-auto">
           <p className="text-sm font-semibold text-purple-500">Quality Features</p>
           <h2 className="mt-2 text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900">
@@ -50,7 +50,7 @@ export default function FutureApp() {
           </h2>
         </div>
 
-        {/* Grid */}
+
         <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {features.map(({ title, desc, Icon, gradient, tint }, i) => (
             <article key={i} className="group flex flex-col items-center text-center">
@@ -63,7 +63,7 @@ export default function FutureApp() {
                 </div>
               </div>
 
-              {/* Text */}
+
               <h3 className="mt-5 text-base font-semibold text-slate-900">{title}</h3>
               <p className="mt-2 text-sm leading-6 text-slate-500 max-w-xs">{desc}</p>
             </article>
