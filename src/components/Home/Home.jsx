@@ -1,9 +1,12 @@
 import { useState } from "react";
+import FutureApp from "./FutureApp";
+import BostDeveloper from "./BostDeveloper";
+import Software from "./Software/Software";
+import CustomerComment from "./Customer Comment/CustomerComments";
 
 export default function HomeHero({
-  title = `Great software is built with amazing developers`,
   description = `We help build and manage a team of world-class developers to bring your vision to life`,
-  imageSrc = "../../assets/Homepage/Mask Group.png",
+  imageSrc = "https://github.com/sajjadjim/agency_minimal/blob/main/src/assets/Homepage/Mask%20Group.png?raw=true",
   imageAlt = "Team working together at a desk",
   sponsors = [
     { name: "Acme", logoSrc: "https://dummyimage.com/120x40/eee/999&text=Acme" },
@@ -46,13 +49,14 @@ export default function HomeHero({
   };
 
   return (
-    <section className="w-full ">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <section>
+      <section className="w-full bg-[#F6F8FB]">
+      <div className="mx-auto 2xl:max-w-10/12 md:w-11/12 px-4 ">
         <div className="grid items-center gap-10 py-12 md:grid-cols-2 md:py-20">
           {/* Text side */}
           <div className="order-2 md:order-1">
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-              {title}
+            <h1 className="2xl:text-7xl md:text-4xl font-extrabold tracking-tight text-5xl">
+             Great software is <br className="md:block hidden" /> built with amazing <br className="md:block hidden" /> developers
             </h1>
             <p className="mt-4 text-lg text-gray-600">{description}</p>
 
@@ -119,12 +123,17 @@ export default function HomeHero({
 
           {/* Image side */}
           <div className="order-1 md:order-2">
-            <div className="relative overflow-hidden rounded-2xl shadow-xl">
-              <img src={imageSrc} alt={imageAlt} className="h-full w-full object-cover" />
+            <div className="relative overflow-hidden rounded-2xl ">
+              <img src={imageSrc} alt={imageAlt} className="h-full w-full bg-[#F6F8FB] object-cover" />
             </div>
           </div>
         </div>
       </div>
     </section>
+    <FutureApp></FutureApp>
+    <BostDeveloper></BostDeveloper>
+    <Software></Software>
+    <CustomerComment></CustomerComment>
+  </section>
   );
 }

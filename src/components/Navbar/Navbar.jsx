@@ -1,0 +1,156 @@
+// Navbar.jsx
+import React, { useState } from "react";
+import { NavLink } from "react-router";
+
+const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
+  const linkBase =
+    "px-3 py-2 rounded-md text-sm font-medium transition-colors";
+  const linkIdle =
+    "text-gray-600 hover:text-gray-900 hover:bg-gray-50";
+  const linkActive = "text-gray-900 bg-gray-100";
+
+  const navLinkClass = ({ isActive }) =>
+    `${linkBase} ${isActive ? linkActive : linkIdle}`;
+
+  const closeMenu = () => setOpen(false);
+
+  return (
+    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-200">
+      <nav className="mx-auto 2xl:max-w-10/12 md:w-11/12 px-4 ">
+        <div className="grid grid-cols-3 items-center gap-4 py-3">
+          {/* Left: Logo */}
+          <div className="flex items-center">
+            <NavLink
+              to="/"
+              onClick={closeMenu}
+              className="inline-flex items-center gap-2"
+            >
+              <span className="text-xl"><img src="../../../public/icons8-logo-50.png" alt="" className="h-8 w-8" /></span>
+              <span className="text-lg font-bold text-gray-900">
+                Builderz
+              </span>
+            </NavLink>
+          </div>
+
+          <ul className="hidden md:flex justify-center items-center gap-4">
+            <li>
+              <NavLink to="/" className={navLinkClass}>
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/" className={navLinkClass}>
+                Adversite
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/" className={navLinkClass}>
+                Supports
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/" className={navLinkClass}>
+                Contact
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/" className={navLinkClass}>
+                AboutUs
+              </NavLink>
+            </li>
+          </ul>
+
+          {/* Right: Register (hidden on small screens) */}
+          <div className="hidden md:flex justify-end">
+            <NavLink
+              to="/register"
+              className="inline-flex items-center rounded-lg px-4 py-2 text-sm font-semibold text-[#8D448B] border-1 border-[#8D448B] hover:bg-[#8D448B] hover:text-white  transition duration-300  focus:outline-none focus:ring-2 focus:ring-gray-900/30"
+            >
+              Register
+            </NavLink>
+          </div>
+
+          {/* Hamburger button (mobile) */}
+          <div className="flex justify-end md:hidden">
+            <button
+              type="button"
+              aria-label="Toggle menu"
+              aria-expanded={open}
+              onClick={() => setOpen((v) => !v)}
+              className="inline-flex items-center justify-center rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-gray-900/30"
+            >
+              <span className="sr-only">Open main menu</span>
+              <div className="space-y-1.5">
+                <span
+                  className={`block h-0.5 w-6 bg-gray-900 transition-transform ${
+                    open ? "translate-y-2 rotate-45" : ""
+                  }`}
+                />
+                <span
+                  className={`block h-0.5 w-6 bg-gray-900 transition-opacity ${
+                    open ? "opacity-0" : "opacity-100"
+                  }`}
+                />
+                <span
+                  className={`block h-0.5 w-6 bg-gray-900 transition-transform ${
+                    open ? "-translate-y-2 -rotate-45" : ""
+                  }`}
+                />
+              </div>
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile menu */}
+        {open && (
+          <div className="md:hidden border-t border-gray-200 pt-2 pb-3">
+            <ul className="flex flex-col gap-1">
+              <li>
+                <NavLink to="/" onClick={closeMenu} className={navLinkClass}>
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/about" onClick={closeMenu} className={navLinkClass}>
+                  About
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/services"
+                  onClick={closeMenu}
+                  className={navLinkClass}
+                >
+                  Services
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/contact"
+                  onClick={closeMenu}
+                  className={navLinkClass}
+                >
+                  Contact
+                </NavLink>
+              </li>
+            </ul>
+
+            <div className="mt-3">
+              <NavLink
+                to="/register"
+                onClick={closeMenu}
+                className="block w-full text-center rounded-lg px-4 py-2 text-sm font-semibold text-white bg-[#8D448B] hover:[#8D448B] focus:outline-none focus:ring-2 focus:ring-gray-900/30"
+              >
+                Register
+              </NavLink>
+            </div>
+          </div>
+        )}
+      </nav>
+    </header>
+  );
+};
+
+export default Navbar;
