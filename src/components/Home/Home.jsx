@@ -3,16 +3,17 @@ import FutureApp from "./FutureApp";
 import BostDeveloper from "./BostDeveloper";
 import Software from "./Software/Software";
 import CustomerComment from "./Customer Comment/CustomerComments";
+import CustomerSupport from "./Customer Support/CustomerSupport";
+import QualityFeature from "./Quality Feature/QualityFeature";
 
 export default function HomeHero({
   description = `We help build and manage a team of world-class developers to bring your vision to life`,
   imageSrc = "https://github.com/sajjadjim/agency_minimal/blob/main/src/assets/Homepage/Mask%20Group.png?raw=true",
   imageAlt = "Team working together at a desk",
   sponsors = [
-    { name: "Acme", logoSrc: "https://dummyimage.com/120x40/eee/999&text=Acme" },
-    { name: "Globex", logoSrc: "https://dummyimage.com/120x40/eee/999&text=Globex" },
-    { name: "Initech", logoSrc: "https://dummyimage.com/120x40/eee/999&text=Initech" },
-    { name: "Umbrella", logoSrc: "https://dummyimage.com/120x40/eee/999&text=Umbrella" },
+    { name: "Google", logoSrc: "../../../public/logo/google.png" },
+    { name: "PayPal", logoSrc: "../../../public/logo/paypal.png" },
+
   ],
   onSubscribe,
 }) {
@@ -42,8 +43,8 @@ export default function HomeHero({
       setStatus("success");
       setMessage("Thanks for subscribing! Please check your inbox.");
       setEmail("");
-    } catch (err) {
-      setStatus("error");
+    } catch (error) {
+      setStatus("error",error);
       setMessage("Something went wrong. Please try again.");
     }
   };
@@ -134,6 +135,8 @@ export default function HomeHero({
     <BostDeveloper></BostDeveloper>
     <Software></Software>
     <CustomerComment></CustomerComment>
+    <CustomerSupport></CustomerSupport>
+    <QualityFeature></QualityFeature>
   </section>
   );
 }
