@@ -1,12 +1,36 @@
-# React + Vite
+# Builderz
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Builderz is a minimal agency website built with modern web technologies.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: Component-based UI development
+- **React Icons**: Easy-to-use icon library
+- **React Router**: Client-side routing
+- **Tailwind CSS**: Utility-first CSS framework for rapid styling
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+2. **Run the development server:**
+    ```bash
+    npm start
+    ```
+
+## Folder Structure
+
+```
+src/
+  components/
+  pages/
+  App.js
+  index.js
+```
+
+## License
+
+MIT
