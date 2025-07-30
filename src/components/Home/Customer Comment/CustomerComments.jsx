@@ -28,7 +28,7 @@ const CustomerComment = () => {
         Why customers love us
       </h2>
 
-      <p className="text-xl md:text-2xl text-gray-800 max-w-3xl mx-auto mb-12 leading-relaxed font-serif">
+      <p className="text-xl md:text-2xl playfair_display text-gray-800 max-w-3xl mx-auto mb-12 leading-relaxed font-serif">
         They are doing amazing job with hundred percent customer satisfaction,
         Love their work and would like to work with them again
       </p>

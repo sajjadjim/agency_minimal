@@ -22,7 +22,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto py-8 px-6 flex flex-col md:flex-row justify-between items-center">
         <div className="flex items-center space-x-2 mb-4 md:mb-0">
           <img
-            src="../../../public/icons8-logo-50.png"
+            src="/icons8-logo-50.png"
             alt="Logo"
             className="w-6 h-6"
           />

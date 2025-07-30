@@ -12,8 +12,8 @@ export default function HomeHero({
   imageSrc = "https://github.com/sajjadjim/agency_minimal/blob/main/src/assets/Homepage/Mask%20Group.png?raw=true",
   imageAlt = "Team working together at a desk",
   sponsors = [
-    { name: "Google", logoSrc: "../../../public/logo/google.png" },
-    { name: "PayPal", logoSrc: "../../../public/logo/paypal.png" },
+    { name: "Google", logoSrc: "/logo/google.png" },
+    { name: "PayPal", logoSrc: "/logo/paypal.png" },
 
   ],
   onSubscribe,
