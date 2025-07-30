@@ -12,7 +12,7 @@ const Software = () => {
             <p className="text-gray-600 mb-6 max-w-xl mx-auto">
                 We believe it’s important for everyone to have access to software especially when it comes to digital learning be navigate.
             </p>
-            <a href="#" className="text-purple-600 font-medium underline mb-10 inline-block">
+            <a href="#" className="text-[#8D448B] font-medium underline mb-10 inline-block">
                 Explore Details
             </a>
 
@@ -28,7 +28,7 @@ const Software = () => {
                             className="absolute animate-pulse cursor-pointer inset-0 flex items-center justify-center  bg-opacity-40 hover:bg-opacity-60 transition"
                         >
                             <div className="bg-white p-4 rounded-full shadow-lg">
-                                <svg className="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                                <svg className="w-8 h-8 text-[#8D448B]" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M8 5v14l11-7z" />
                                 </svg>
                             </div>

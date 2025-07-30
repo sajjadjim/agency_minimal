@@ -57,13 +57,11 @@ export default function FutureApp() {
               {/* Icon tile */}
               <div className="rounded-2xl p-0.5 shadow-sm transition-transform group-hover:-translate-y-0.5">
                 <div className={`h-16 w-16 rounded-2xl bg-gradient-to-br ${gradient} p-1`}>
-                  <div className={`flex h-full w-full items-center justify-center rounded-2xl ${tint}`}>
+                  <div className={`flex h-full w-full items-center cursor-pointer justify-center rounded-2xl ${tint}`}>
                     <Icon className="h-7 w-7 text-slate-700/90" aria-hidden="true" />
                   </div>
                 </div>
               </div>
-
-
               <h3 className="mt-5 text-base font-semibold text-slate-900">{title}</h3>
               <p className="mt-2 text-sm leading-6 text-slate-500 max-w-xs">{desc}</p>
             </article>

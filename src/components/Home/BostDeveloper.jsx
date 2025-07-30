@@ -67,13 +67,11 @@ export default function BostDeveloper({
                   className="group inline-flex items-center gap-2 text-sm font-semibold text-sky-700 hover:text-sky-900 focus:outline-none focus:ring-2 focus:ring-sky-300"
                 >
                   {ctaText}
-                  <FiArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                  <FiArrowRight className="h-4 w-4 cursor-pointer transition-transform group-hover:translate-x-0.5" />
                 </button>
               </div>
             </div>
           </div>
-
-          {/* decorative bottom line to mimic framed edges */}
         </div>
       </div>
     </section>
