@@ -5,7 +5,7 @@ const Software = () => {
 
     return (
         <div id='advertisement' className="py-16 px-4 md:px-12 lg:px-24 text-center bg-white">
-        
+
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Leading companies trust us <br /> to develop software
             </h2>
@@ -19,12 +19,13 @@ const Software = () => {
 
             <div className="relative max-w-5xl mx-auto aspect-video rounded-xl overflow-hidden shadow-lg">
                 {!isPlaying ? (
-                    <div className="w-full h-full bg-cover bg-center" style={{
+                    <div className="w-full h-full bg-cover bg-center " style={{
                         backgroundImage: "url('https://t3.ftcdn.net/jpg/05/81/65/08/360_F_581650862_tdOma1hWudGjDqD8CzExG5YP8lvtGJa2.jpg')"
                     }}>
+
                         <button
                             onClick={() => setIsPlaying(true)}
-                            className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 hover:bg-opacity-60 transition"
+                            className="absolute animate-pulse cursor-pointer inset-0 flex items-center justify-center  bg-opacity-40 hover:bg-opacity-60 transition"
                         >
                             <div className="bg-white p-4 rounded-full shadow-lg">
                                 <svg className="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
