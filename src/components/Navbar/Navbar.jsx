@@ -128,28 +128,24 @@ const Navbar = () => {
               <span className="sr-only">Open main menu</span>
               <div className="space-y-1.5">
                 <span
-                  className={`block h-0.5 w-6 bg-gray-900 transition-transform ${
-                    open ? "translate-y-2 rotate-45" : ""
-                  }`}
+                  className={`block h-0.5 w-6 bg-gray-900 transition-transform ${open ? "translate-y-2 rotate-45" : ""
+                    }`}
                 />
                 <span
-                  className={`block h-0.5 w-6 bg-gray-900 transition-opacity ${
-                    open ? "opacity-0" : "opacity-100"
-                  }`}
+                  className={`block h-0.5 w-6 bg-gray-900 transition-opacity ${open ? "opacity-0" : "opacity-100"
+                    }`}
                 />
                 <span
-                  className={`block h-0.5 w-6 bg-gray-900 transition-transform ${
-                    open ? "-translate-y-2 -rotate-45" : ""
-                  }`}
+                  className={`block h-0.5 w-6 bg-gray-900 transition-transform ${open ? "-translate-y-2 -rotate-45" : ""
+                    }`}
                 />
               </div>
             </button>
           </div>
         </div>
-
         {open && (
           <div className="md:hidden border-t border-gray-200 pt-2 pb-3">
-            <ul className="flex flex-col gap-1">
+            <ul className="flex flex-col cursor-pointer gap-1">
               <li>
                 <button
                   type="button"
